@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire d'inscription</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1e1e1e; /* Fond sombre */
+            margin: 0;
+            padding: 20px;
+        }
+
+        .neon-text {
+            text-align: center;
+            display: inline-block; /* Nécessaire pour l'animation */
+            font-size: 3em; /* Ajustez la taille de la police selon vos préférences */
+            text-shadow: 0 0 5px #00ffcc, 0 0 10px #00ffcc, 0 0 20px #00ffcc;
+            transition: color 0.3s ease; /* Transition pour une animation douce */
+            color: #00ffcc; /* Couleur par défaut */
+            padding: 10px; /* Espace autour du texte pour la bordure */
+            border: 5px solid transparent; /* Bordure transparente par défaut */
+            border-radius: 5px; /* Bordure arrondie */
+            position: relative; /* Nécessaire pour le positionnement de la bordure */
+            animation: neon-animation 1s infinite alternate; /* Déclenche l'animation */
+        }
+
+        @keyframes neon-animation {
+            0% { color: #00ffcc; border-color: #00ffcc; }
+            25% { color: #ff00ff; border-color: #ff00ff; }
+            50% { color: #ffcc00; border-color: #ffcc00; }
+            75% { color: #00ccff; border-color: #00ccff; }
+            100% { color: #00ff00; border-color: #00ff00; }
+        }
+
+        form {
+            background: rgba(255, 255, 255, 0.1); /* Fond semi-transparent */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+            max-width: 400px;
+            margin: auto;
+            backdrop-filter: blur(10px); /* Flou en arrière-plan */
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            color: #fff; /* Texte blanc */
+        }
+
+        input[type="text"],
+        input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: none;
+            border-radius: 5px;
+            background: rgba(255, 255, 255, 0.2); /* Fond d'entrée semi-transparent */
+            color: #00ffcc; /* Couleur néon */
+            box-shadow: 0 0 5px rgba(0, 255, 255, 0.5), 0 0 10px rgba(0, 255, 255, 0.5);
+        }
+
+        input[type="submit"] {
+            background-color: #00ffcc; /* Couleur néon */
+            color: black; /* Texte noir */
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 0 0 5px rgba(0, 255, 255, 0.5), 0 0 10px rgba(0, 255, 255, 0.5);
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #00e6b3; /* Légère variation au survol */
+            transform: scale(1.05); /* Agrandir au survol */
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .success {
+            color: #00ffcc; /* Couleur néon pour succès */
+        }
+
+        .danger {
+            color: red; /* Couleur pour les erreurs */
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.8); /* Fond sombre */
+            color: #00ffcc; /* Couleur néon pour le texte */
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+        }
+
+        footer p {
+            margin: 0; /* Supprimer la marge par défaut */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="neon-text">Inscription</h1>
+    </header>
+
+    <main>
+        <form action="/submit" method="post" class="registration-form">
+            <div class="form-group">
+                <label for="full_name">Nom Complet:</label>
+                <input type="text" id="full_name" name="full_name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="city">Ville:</label>
+                <input type="text" id="city" name="city" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <input type="submit" value="Enregistrer" class="submit-button">
+        </form>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Oussama El Masrar. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>
